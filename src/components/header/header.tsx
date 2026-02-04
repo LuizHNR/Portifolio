@@ -3,6 +3,7 @@ import { IoMdHome } from "react-icons/io";
 import { FaPenNib } from "react-icons/fa";
 import { MdPermPhoneMsg } from "react-icons/md";
 
+import SplitText from "../SplitText";
 import styles from "./header.module.css";
 
 export default function Header() {
@@ -10,7 +11,16 @@ export default function Header() {
     <header className={styles.header}>
 
       <Link href="/">
-        <p className="text-white">&copy; Code by Luiz</p>
+        <SplitText
+          text="© Code by Luiz"
+          className={styles.logo}
+          splitType="chars"
+          delay={40}
+          duration={0.8}
+          from={{ opacity: 0, y: 10 }}
+          to={{ opacity: 1, y: 0 }}
+          textAlign="left"
+        />
       </Link>
 
       <nav>
