@@ -55,7 +55,7 @@
 
 
 .icon svg {
-  font-size: 22px;
+  font-size: clamp(23px, 4vw, 27px);
   color: #ffffff;
 }
 

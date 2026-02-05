@@ -2,18 +2,45 @@ import Link from "next/link";
 import { GoArrowDownLeft } from "react-icons/go";
 import { SaoPauloClock } from "../time/saoPauloClock";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import styles from "./footer.module.css";
 
 export default function Footer() {
+  
   const [copied, setCopied] = useState("");
+
+  const knowMeRef = useRef<HTMLAnchorElement | null>(null);
+
 
   function copy(text: string) {
     navigator.clipboard.writeText(text);
     setCopied(text);
     setTimeout(() => setCopied(""), 1500);
   }
+
+
+  useEffect(() => {
+    const element = knowMeRef.current;
+    if (!element) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          element.classList.add(styles.animateIn);
+          observer.disconnect(); // anima só uma vez
+        }
+      },
+      {
+        threshold: 0.4,
+      }
+    );
+
+    observer.observe(element);
+
+    return () => observer.disconnect();
+  }, []);
+
 
 
   return (
@@ -26,13 +53,13 @@ export default function Footer() {
         <p>&lt;contact&gt;</p>
 
         <p>
-          Feel free to reach me on{" "}
-          <Link href="https://www.linkedin.com/in/luiz-henrique-neri-reimberg-6ab0032b8/" target="_blank" className={`text-[#A63131]`}>
+          &emsp;Feel free to reach me on{" "}
+          <Link href="https://www.linkedin.com/in/luiz-henrique-neri-reimberg-6ab0032b8/" target="_blank" className={`hover:text-[#A63131]`}>
             LinkedIn
           </Link>{" "}
           or{" "}
-          <Link href="https://www.instagram.com/lu_lhnr/" target="_blank" className={`text-[#A63131]`}>
-            Instagram
+          <Link href="https://www.instagram.com/lu_lhnr/" target="_blank" className={`hover:text-[#A63131]`}>
+            Instagram.
           </Link>
         </p>
 
@@ -45,7 +72,7 @@ export default function Footer() {
 
         <div className={styles.lineWrapper}>
           <hr />
-          <Link href="/contact"
+          <Link ref={knowMeRef} href="/contact"
             className={styles.knowMe}
             onMouseMove={(e) => {
               const el = e.currentTarget;

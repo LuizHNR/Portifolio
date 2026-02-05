@@ -45,6 +45,8 @@
             right: 8%;          
             top: 50%;
             transform: translateY(-50%);
+            will-change: transform;
+
 
             width: clamp(10rem, 20vw, 15rem);
             aspect-ratio: 1 / 1; 
@@ -83,7 +85,6 @@
             transform: translate(-50%, -50%);
 
             opacity: 0;
-            transition: opacity 0.2s ease, transform 0.3s ease;
         }
 
 
@@ -98,11 +99,16 @@
 
 }
 
+.animateIn {
+  animation: slideInFromLeft 4s cubic-bezier(0.22, 0.7, 0.36, 1) forwards;
+}
+
+
 .address {
   display: flex;
   flex-wrap: wrap;
-  padding-top: 40px;
-  gap: 10%;
+  padding-top: 60px;
+  gap: 5%;
 
   & .copy {
     cursor: pointer;
@@ -134,4 +140,20 @@
 }
 
 
+/* Animação */
 
+@keyframes slideInFromLeft {
+  0% {
+    transform: translate(-400%, -50%);
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(0, -50%);
+    opacity: 1;
+  }
+}

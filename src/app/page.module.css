@@ -1,0 +1,57 @@
+.localization {
+  position: relative;
+  min-height: 100vh;
+  background: #000;
+  overflow: hidden;
+  color: white;
+}
+
+
+.particlesBg {
+  position: absolute;
+  inset: 0; 
+  z-index: 1;
+
+  pointer-events: auto;
+}
+
+
+.content {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 80px;
+  min-height: 100vh;
+
+  pointer-events: none;
+}
+
+.text {
+  max-width: 480px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border: 1px solid #666;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  margin-bottom: 20px;
+}
+
+.text h1 {
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  margin-bottom: 16px;
+}
+
+.text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #cfcfcf;
+}
+

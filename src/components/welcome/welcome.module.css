@@ -1,0 +1,27 @@
+.welcomeSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100vh;
+  background-color: #a63131;
+
+  font-size: clamp(5rem, 20vw, 17rem);
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.7);
+
+  overflow: hidden;
+}
+
+.welcomeSection h1 {
+  white-space: nowrap;
+}
+
+.dash {
+  display: block;
+  height: 0.15em;
+  width: 0; /* começa colado */
+  background-color: rgba(255, 255, 255, 0.7);
+
+  transition: width 0.05s linear;
+}
