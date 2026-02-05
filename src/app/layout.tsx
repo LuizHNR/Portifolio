@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Figtree } from "next/font/google";
 import "./globals.css";
 
+import SmoothScroll from "../components/smoothScroll";
+
 import HeaderFooterController from "../components/headerFooterController";
 
 const figtree = Figtree({
@@ -23,6 +25,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={`${figtree.variable} font-fig`}>
+        <SmoothScroll />
         <HeaderFooterController>
         {children}
         </HeaderFooterController>
