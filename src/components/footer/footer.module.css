@@ -1,0 +1,137 @@
+.footer{
+    background-color: #242226;
+    padding: 10% 10% 5% 10%;
+    color: white;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    font-size: clamp(1rem, 1.5vw, 2rem);
+    gap: 10px;
+}
+
+.divider{
+    display: flex;
+    flex-direction: column;
+    gap: clamp(5rem, 20vw, 10rem);
+
+
+    & .icon{
+        font-size: clamp(1.5rem, 3vw, 3rem);
+        align-self: end;
+        margin-right: clamp(1rem, 2.5vw, 2rem);
+    }
+
+
+    & .lineWrapper {
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        & hr {
+            width: 100%;
+            border: 0.5px solid #565656;
+
+        } 
+
+        & .knowMe {
+            position: absolute;
+            right: 8%;          
+            top: 50%;
+            transform: translateY(-50%);
+
+            width: clamp(10rem, 20vw, 15rem);
+            aspect-ratio: 1 / 1; 
+            border-radius: 50%;
+            background-color: #A63131;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            cursor: pointer;
+            overflow: hidden;
+
+            --x: 50%;
+            --y: 50%;
+
+
+            & p {
+                font-size: clamp(1rem, 1.5vw, 2rem);
+                transition: transform 0.15s ease-out;
+                pointer-events: none;
+            }
+        } 
+        
+        & .knowMe::after {
+            content: "";
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            background: rgba(255, 255, 255, 0.25);
+            border-radius: 50%;
+            pointer-events: none;
+
+            left: var(--x);
+            top: var(--y);
+            transform: translate(-50%, -50%);
+
+            opacity: 0;
+            transition: opacity 0.2s ease, transform 0.3s ease;
+        }
+
+
+        & .knowMe:hover::after {
+            opacity: 1;
+        }
+
+        & .knowMe:hover {
+            transform: translateY(-50%) scale(1.05);
+        }
+    }
+
+}
+
+.address {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 40px;
+  gap: 10%;
+
+  & .copy {
+    cursor: pointer;
+    width: fit-content;
+    border: 1px solid #565656;
+    border-radius: 999px;
+    padding: 20px;
+    transition: background 0.2s ease, transform 0.1s ease;
+
+    font-size: clamp(0.7rem, 1vw, 3rem);
+    }
+
+  & .copy:hover {
+    background: #A63131;
+    }
+
+  & .copy:active {
+    transform: scale(0.97);
+    }
+}
+
+
+.footerBottom {
+    display: flex;
+    flew-wrap: wrap;
+    gap: 70px;
+    font-size: clamp(0.7rem, 1vw, 1.5rem);
+    font-weight: bold;
+}
+
+
+
