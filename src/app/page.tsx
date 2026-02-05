@@ -4,8 +4,12 @@ import Image from "next/image";
 
 import styles from "./page.module.css";
 
-export default function Home() {
+async function delay(ms: number) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 
+export default async function Home() {
+  await delay(1800); 
 
   return (
     <main>
