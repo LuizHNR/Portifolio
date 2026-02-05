@@ -55,3 +55,36 @@
   color: #cfcfcf;
 }
 
+.developer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 60vh;
+  text-align: center;
+  text-align: left;
+
+
+
+  & h1 {
+    font-size: clamp(1rem, 2vw, 2rem);
+    font-weight: 500;
+    width: 400px;
+  }
+
+  & p {
+    font-size: clamp(1rem, 1.3vw, 2rem);
+    width: 400px;
+  }
+}
+
+
+.logoLoopWrapper {
+  height: 200px;
+}
+
+
+.logoLoopWrapper svg {
+  width: clamp(32px, 6vw, 60px);
+  height: clamp(32px, 6vw, 60px);
+}
