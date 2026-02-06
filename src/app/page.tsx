@@ -1,6 +1,7 @@
 import Welcome from "@/components/welcome/welcome";
 import Particles  from "@/components/particles/Particles";
 import Image from "next/image";
+import CardSwap, { Card } from "@/components/card/CardSwap";
 
 import LogoLoop from "@/components/logoLoop/LogoLoop";
 import {SiReact,SiNextdotjs,SiTypescript,SiTailwindcss,SiGithub,SiHtml5,SiCss3,SiJavascript,SiDotnet,SiPython,
@@ -8,6 +9,7 @@ import {SiReact,SiNextdotjs,SiTypescript,SiTailwindcss,SiGithub,SiHtml5,SiCss3,S
 
 
 import styles from "./page.module.css";
+import Link from "next/link";
 
 async function delay(ms: number) {
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -95,6 +97,128 @@ const techLogos = [
           fadeOutColor="#ffffff"
         />
       </div>
+
+      <section className={styles.projetos}>
+
+        <h1 className={styles.some}>Some projects!</h1>
+
+        <div
+          className={styles.projetoLevi}>
+          <div className={styles.detalheProjeto}>
+            <h2>01</h2>
+            <h1>Levi</h1>
+
+            <div className="flex flex-col gap-4">
+              <h2 className="pl-3.5">
+                Creator of the Design • in a team in programming
+              </h2>
+              <p>
+                LEVI is a clean energy project that encourages individuals and companies
+                to invest in solar energy, promoting sustainability and long-term investment.
+              </p>
+            </div>
+
+            <h3>Web Site</h3>
+          </div>
+
+          <aside style={{ height: '400px', position: 'relative' }}>
+            <CardSwap
+              cardDistance={60}
+              verticalDistance={70}
+              delay={5000}
+              pauseOnHover={false}
+            >
+              <Card>
+                <Image
+                  src="/projetos/Levi/image1.png"
+                  alt="imagem projeto levi"
+                  width={600}
+                  height={600}
+                />
+              </Card>
+              <Card>
+                <Image
+                  src="/projetos/Levi/image2.png"
+                  alt="imagem projeto levi"
+                  width={600}
+                  height={600}
+                />
+              </Card>
+              <Card>
+                <Image
+                  src="/projetos/Levi/image3.png"
+                  alt="imagem projeto levi"
+                  width={600}
+                  height={600}
+                />
+              </Card>
+            </CardSwap>
+          </aside>
+
+
+        </div>
+
+
+
+        <div
+          className={styles.projetoLevi}>
+          <div className={styles.detalheProjeto}>
+            <h2>02</h2>
+            <h1>NebuloHub</h1>
+
+            <div className="flex flex-col gap-4">
+              <h2 className="pl-3.5">
+                Creator of the Design • in a team in programming
+              </h2>
+              <p>
+                NebuloHub is an intelligent platform that connects, evaluates, and gives
+                visibility to startups using AI and public reviews.
+              </p>
+            </div>
+
+            <h3>Mobile App</h3>
+          </div>
+
+          <aside style={{ height: '400px', position: 'relative'}}>
+            <CardSwap
+              cardDistance={60}
+              verticalDistance={70}
+              delay={5000}
+              pauseOnHover={false}
+            >
+              <Card>
+                <Image
+                  src="/projetos/nebulo/image1.png"
+                  alt="imagem projeto levi"
+                  width={110}
+                  height={110}
+                />
+              </Card>
+              <Card>
+                <Image
+                  src="/projetos/nebulo/image2.png"
+                  alt="imagem projeto levi"
+                  width={110}
+                  height={110}
+                />
+              </Card>
+              <Card>
+                <Image
+                  src="/projetos/nebulo/image3.png"
+                  alt="imagem projeto levi"
+                  width={110}
+                  height={110}
+                />
+              </Card>
+            </CardSwap>
+          </aside>
+
+        </div>
+
+
+          <Link href="/work" className={styles.more}>More work</Link>
+
+      </section>
 
 
     </main>

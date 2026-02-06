@@ -3,7 +3,7 @@ import { IoMdHome } from "react-icons/io";
 import { FaPenNib } from "react-icons/fa";
 import { MdPermPhoneMsg } from "react-icons/md";
 
-import SplitText from "../SplitText";
+import SplitText from "../split/SplitText";
 import styles from "./header.module.css";
 
 export default function Header() {

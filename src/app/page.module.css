@@ -88,3 +88,89 @@
   width: clamp(32px, 6vw, 60px);
   height: clamp(32px, 6vw, 60px);
 }
+
+.projetos{
+  display: flex;
+  flex-direction: column;
+  gap: 150px;
+  padding-bottom: 200px;
+
+  & .projetoLevi{
+    display: flex;
+    justify-content: space-between;
+    padding: 0% 10%;
+
+
+    & .detalheProjeto{
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+
+
+      & h2{
+        font-size: clamp(1rem, 1.5vw, 2rem);
+        font-weight: 500;
+      }
+
+      & h1{
+        font-size: clamp(1rem, 2vw, 2rem);
+        padding-left: 20px;
+        font-weight: bold;
+      }
+
+      & p{
+        padding-left: 20px;
+        font-size: clamp(0.9rem, 1.2vw, 1.5rem);
+        width: 50%;
+      }
+
+      & h3{
+        font-size: clamp(0.9rem, 2vw, 1.5rem);
+        font-weight: 500;
+        color: #4F4D52;
+      }
+
+    }
+
+  }
+}
+
+
+
+.more {
+  display: block;
+  width: fit-content;
+  align-self: center;
+  padding: 6px 14px;
+  border: 1px solid #666;
+  border-radius: 999px;
+  font-size: clamp(0.75rem, 1.5vw, 1.5rem);
+  margin-bottom: 20px;
+}
+
+
+.some {
+  font-size: clamp(1.5rem, 2vw, 3rem);
+  font-weight: 500;
+  padding-left: 100px;
+}
+
+
+
+
+@media (max-width: 1200px) {
+
+  .projetos{
+    justify-content: center;
+    align-items: center;
+
+
+    &  .projetoLevi{
+      display: flex;
+      flex-direction: column;
+
+    }
+  }
+
+
+}
