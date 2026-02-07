@@ -10,11 +10,7 @@ const NO_LAYOUT_ROUTES = [
   `/contact`,
 ];
 
-export default function HeaderFooterController({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function HeaderFooterController({children,}: {children: React.ReactNode;}) {
   const pathname = usePathname();
 
   const isNoLayoutRoute = NO_LAYOUT_ROUTES.some(route =>

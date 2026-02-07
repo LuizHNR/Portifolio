@@ -11,12 +11,9 @@ import {SiReact,SiNextdotjs,SiTypescript,SiTailwindcss,SiGithub,SiHtml5,SiCss3,S
 import styles from "./page.module.css";
 import Link from "next/link";
 
-async function delay(ms: number) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
 
-export default async function Home() {
-  await delay(1800); 
+export default function Home() {
+
 
 const techLogos = [
   { node: <SiReact />, title: "React", href: "https://react.dev" },

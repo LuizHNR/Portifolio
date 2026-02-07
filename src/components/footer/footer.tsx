@@ -28,8 +28,7 @@ export default function Footer() {
       ([entry]) => {
         if (entry.isIntersecting) {
           element.classList.add(styles.animateIn);
-        } else {
-          element.classList.remove(styles.animateIn);
+          observer.disconnect();
         }
       },
       {

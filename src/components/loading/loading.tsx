@@ -5,12 +5,14 @@ import styles from "./loading.module.css";
 
 export default function Loading() {
   const [leaving, setLeaving] = useState(false);
+  
 
   useEffect(() => {
+    window.scrollTo(0, 0); 
     // inicia o fade-out logo antes de desmontar
     const timer = setTimeout(() => {
       setLeaving(true);
-    }, 600);
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, []);
