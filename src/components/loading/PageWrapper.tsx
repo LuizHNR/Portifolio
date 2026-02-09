@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import Loading from "@/components/loading/loading";
 
 export default function PageWrapper({
@@ -8,19 +9,29 @@ export default function PageWrapper({
 }: {
   children: React.ReactNode;
 }) {
-  const [isReady, setIsReady] = useState(false);
+  const pathname = usePathname();
+  const [isReady, setIsReady] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsReady(true);
-    }, 2000); // TEMPO TOTAL DO LOADING
+    let cancelled = false;
 
-    return () => clearTimeout(timer);
-  }, []);
+    setIsReady(false);
+
+    const timer = setTimeout(() => {
+      if (!cancelled) {
+        setIsReady(true);
+      }
+    }, 2000); // tempo do loading
+
+    return () => {
+      cancelled = true;
+      clearTimeout(timer);
+    };
+  }, [pathname]);
 
   if (!isReady) {
-    return <Loading />; // página NÃO existe ainda
+    return <Loading />;
   }
 
-  return <>{children}</>; // só aparece depois
+  return <>{children}</>;
 }

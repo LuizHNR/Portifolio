@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { GoArrowDownLeft } from "react-icons/go";
 import { SaoPauloClock } from "../time/saoPauloClock";

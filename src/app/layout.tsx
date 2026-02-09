@@ -4,7 +4,8 @@ import "./globals.css";
 
 import SmoothScroll from "../components/smoothScroll";
 import PageWrapper from "@/components/loading/PageWrapper";
-import HeaderFooterController from "../components/headerFooterController";
+import Header from "@/components/header/header";
+import Footer from "@/components/footer/footer";
 
 const figtree = Figtree({
   variable: "--font-figtree",
@@ -26,10 +27,10 @@ export default function RootLayout({
     <html lang="pt-BR">
       <body suppressHydrationWarning className={`${figtree.variable} font-fig`}>
         <SmoothScroll />
-        <PageWrapper>
-          <HeaderFooterController>
+        <PageWrapper >
+          <Header/>
             {children}
-          </HeaderFooterController>
+          <Footer/>
         </PageWrapper>
 
       </body>

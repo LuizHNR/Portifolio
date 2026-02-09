@@ -67,6 +67,7 @@ const techLogos = [
             <Image
               src="/gifs/earth.gif"
               alt="Earth"
+              unoptimized
               width={600}
               height={600}
             />
