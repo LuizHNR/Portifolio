@@ -3,6 +3,7 @@ import Image from "next/image";
 import BlobCursor from "@/components/cursorBlob/BlobCursor"
 import Welcome from "@/components/welcome/welcome";
 import Caurosel from "@/components/carousel/carousel"
+import WhatsAppButton from "@/components/whatsapp/whatsappButton";
 
 import styles from "./contact.module.css"
 
@@ -141,14 +142,21 @@ export default function Contact() {
 
             <section className={styles.information}>
 
-                <h1 className="text-2xl md:text-4xl font-bold text-center p-20">
+                <section
+                className=" w-full min-h-[50vh] md:min-h-[70vh] lg:min-h-[85vh] flex items-center justify-center bg-[url('/background/icons.png')] bg-no-repeat bg-center bg-size-[110%] md:bg-size-[80%] lg:bg-size-[70%]">
+
+                <h1 className="text-xl md:text-3xl lg:text-4xl font-medium text-center text-black px-6">
                     What can I offer you
                     <span className={styles.dots}>
-                        <span>.</span>
-                        <span>.</span>
-                        <span>.</span>
+                    <span>.</span>
+                    <span>.</span>
+                    <span>.</span>
                     </span>
                 </h1>
+                </section>
+
+
+
 
                 <div className={styles.information}>
                     <div className={styles.about}>
@@ -183,7 +191,7 @@ export default function Contact() {
 
             </section>
 
-
+            <WhatsAppButton />
         </main>
 
     );
