@@ -17,16 +17,16 @@ export default function Contact() {
                     
                     <div className={styles.texto}>
                         <h1>Hi, It’s</h1>
-                        <h1>Luiz</h1>
+                        <h1 className="text-red-700">Luiz</h1>
                     </div>
 
                     <div className={styles.texto}>                
                         <h2>I’m a </h2>
-                        <h2>Software Developer</h2>
+                        <h2 className="text-red-700">Software Developer</h2>
 
                     </div>
 
-                    <p>I create mobile applications and websites, working as a full-stack developer. I am very hardworking and determined.</p>
+                    <p className="text-base md:text-xl">I create mobile applications and websites, working as a full-stack developer. I am very hardworking and determined.</p>
 
                     <div className={styles.texto}>
                         <p>I have</p>
@@ -36,24 +36,25 @@ export default function Contact() {
                             separator=","
                             direction="up"
                             duration={10}
-                            className="count-up-text"
+                            className="count-up-text text-red-700"
                         />
                         <p>years old</p>
                     </div>
 
-                    <p>Always in search of knowledge...</p>
+                    <p className="text-gray-500">Always in search of knowledge...</p>
 
                 </aside>
 
-                <aside>
+                <aside className ={styles.globo} >
                     <Image
                         src="/gifs/earth.gif"
                         alt="Earth"
                         width={460}
                         height={460}
+                        unoptimized
                     />
 
-                    <div>       
+                    <div className={styles.hand}>       
                         <Image
                             src="/gifs/mao.png"
                             alt="Mão"

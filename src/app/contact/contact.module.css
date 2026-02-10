@@ -1,18 +1,65 @@
 .apresentention{
     display: flex;
+    flex-wrap: wrap;
     padding: 5%;
+    gap: 40px;
     justify-content: space-between;
+    font-weight: 500;
 
     & .conteudo {
         display: flex;
         flex-direction: column;
         gap: 20px;
+        width: 40%;
 
 
         & .texto {
             display: flex;
+            gap: 8px;
+
+
+            & h1{
+                font-size: clamp(3rem, 10vw, 5rem);
+            }
+
+            & h2{
+                font-size: clamp(1.5rem, 5vw, 3rem);
+            }
         }
 
 
     }
+
+
+    & .globo{
+        width: min(460px, 90vw);  
+        aspect-ratio: 1 / 1; 
+
+        border: 1px solid black;
+        border-radius: 50%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: relative;
+
+        & .hand{
+            width: 74%;
+            height: 74%;
+            object-fit: contain;
+            position: absolute;
+            left: 16%;      
+            bottom: 50%;
+            transform: translateY(110%);
+        }
+    }
+}
+
+
+@media (max-width: 1050px) {
+    .apresentention .conteudo {
+        width: 100%;
+    }
+    
 }
