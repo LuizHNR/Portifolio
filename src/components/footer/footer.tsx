@@ -55,8 +55,8 @@ export default function Footer() {
       <section className={styles.contact}>
         <p>&lt;contact&gt;</p>
 
-        <p>
-          &emsp;Feel free to reach me on{" "}
+        <p className="pl-10">
+          Feel free to reach me on{" "}
           <Link href="https://www.linkedin.com/in/luiz-henrique-neri-reimberg-6ab0032b8/" target="_blank" className={`hover:text-[#A63131]`}>
             LinkedIn
           </Link>{" "}

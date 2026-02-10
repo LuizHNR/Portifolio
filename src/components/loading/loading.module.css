@@ -11,12 +11,18 @@
   align-items: center;
 
   pointer-events: none;
+
+  & p{
+    color: #858585;
+    padding: 25px;
+    font-weight: bold;
+    text-align: center;
+  }
 }
 
 
 .loading h1 {
   font-size: clamp(2rem, 6vw, 4rem);
-  margin-bottom: 12px;
 }
 
 

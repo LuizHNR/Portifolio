@@ -42,7 +42,7 @@ export default function Contact() {
                         <p>years old</p>
                     </div>
 
-                    <p className="text-gray-500">
+                    <p className="text-gray-400 font-bold">
                         Always in search of knowledge
                         <span className={styles.dots}>
                         <span>.</span>
@@ -128,7 +128,7 @@ export default function Contact() {
 
                 <Caurosel/>
 
-                <p className="text-gray-500">
+                <p className="text-gray-400 font-bold">
                     I love learning new things
                     <span className={styles.dots}>
                         <span>.</span>

@@ -28,12 +28,11 @@ export default function Loading() {
   }
 
   return (
-    <div
-      className={`${styles.loading} ${
-        leaving ? styles.leave : styles.enter
-      }`}
-    >
+    <div className={`${styles.loading} ${leaving ? styles.leave : styles.enter}`}>
+
       <h1>{getTitle()}</h1>
+
+      <p>Please wait a minute while the page loads {getTitle()} is being loaded </p>
 
       <div className={styles.dots}>
         <i />
