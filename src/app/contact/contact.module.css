@@ -1,3 +1,11 @@
+.mainContact{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+
+
 .apresentention{
     display: flex;
     flex-wrap: wrap;
@@ -15,6 +23,7 @@
 
         & .texto {
             display: flex;
+            flex-wrap: wrap;
             gap: 8px;
 
 
@@ -23,7 +32,7 @@
             }
 
             & h2{
-                font-size: clamp(1.5rem, 5vw, 3rem);
+                font-size: clamp(2rem, 5vw, 3rem);
             }
         }
 
@@ -57,9 +66,51 @@
 }
 
 
+.fiap{
+  position: relative;
+  width: 100vw;
+
+  min-height: 40svh;
+  height: clamp(90svh, 130svh, 160svh);
+
+  overflow: hidden;
+  background: #000;
+
+    & logoFiap{
+        object-fit: cover; 
+        object-position: center;
+        z-index: 1;
+    }
+}
+
+
+.graduated {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 10px 40px;
+
+    & .contente {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        font-size: clamp(1rem, 2vw, 1.5rem);
+        font-weight: 400;
+        width: min(1000px, 90vw);  
+    }
+}
+
 @media (max-width: 1050px) {
     .apresentention .conteudo {
         width: 100%;
+    }
+
+    .fiap {
+        height: 40svh;
+    }
+
+    .fiap .logoFiap {
+        object-fit: contain;
     }
     
 }

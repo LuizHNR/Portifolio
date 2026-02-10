@@ -2,6 +2,7 @@ import CountUp from "@/components/count/CountUp";
 import Image from "next/image";
 import BlobCursor from "@/components/cursorBlob/BlobCursor"
 import Welcome from "@/components/welcome/welcome";
+import Caurosel from "@/components/carousel/carousel"
 
 import styles from "./contact.module.css"
 
@@ -10,7 +11,7 @@ export default function Contact() {
     const yearsOuld =  years - 2005;
 
     return(
-        <main>
+        <main className={styles.mainContact}>
 
             <section className={styles.apresentention}>
                 <aside className={styles.conteudo}>
@@ -45,7 +46,7 @@ export default function Contact() {
 
                 </aside>
 
-                <aside className ={styles.globo} >
+                <figure  className ={styles.globo} >
                     <Image
                         src="/gifs/earth.gif"
                         alt="Earth"
@@ -63,19 +64,12 @@ export default function Contact() {
                         />
                     </div>
 
-                </aside>
+                </figure>
 
             </section>
 
-            <section
-                style={{
-                    position: "relative",
-                    width: "100vw",
-                    height: "160svh",
-                    overflow: "hidden",
-                    background: "#000",
-                }}
-                >
+            <section className={styles.fiap}>
+
                 {/* Blob up */}
                 <BlobCursor
                     blobType="circle"
@@ -102,29 +96,65 @@ export default function Contact() {
                     alt="logo-fiap"
                     fill
                     priority
-                    sizes="100vw"
-                    style={{
-                    objectFit: "cover",
-                    zIndex: 1,
-                    }}
+                    className={styles.logoFiap}
                 />
             </section>
 
-            <div>
+            <section className={styles.graduated}>
                 <Welcome/>
 
-                <p>I am a graduate of</p>
-                <p>FIAP</p>
-                <p>college, I completed the</p>
-                <p>Systems Analysis and Development</p>
-                <p>course, finishing in 2025!</p>
-                <hr />
-            </div>
+                <div className={styles.contente}>
+                    <p>I am a graduate of</p>
+                    <p className="text-red-700">FIAP</p>
+                    <p>college, I completed the</p>
+                    <p className="text-red-700">Systems Analysis and Development</p>
+                    <p>course, finishing in 2025!</p>
+
+                </div>
+
+
+                <hr className="text-gray-500" />
+            </section>
+
+            <section className={styles.graduated}>
+                <h1 className="text-2xl md:text-4xl font-bold">Extracurricular courses</h1>
+
+                <Caurosel/>
+
+                <p className="text-gray-500">I love learning new things...</p>
+            </section>
+
 
             <section>
-                <h1>Extracurricular courses</h1>
+                <h1>What can I offer you...</h1>
 
-                <p>I love learning new things...</p>
+                <div>
+                    <h2>01</h2>
+                    <hr />
+                    <div>
+                        <h2>Development</h2>
+                        <p>I create scalable websites from scratch that seamlessly integrate with the design. Whether fully API-connected or not, I create both relational and non-relational databases and utilize them in a RESTful API.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h2>02</h2>
+                    <hr />
+                    <div>
+                        <h2>Team</h2>
+                        <p>I work very well in a team, helping to create new ideas and ways to implement them, always thinking about the scalability of the solutions, both horizontally and vertically.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h2>03</h2>
+                    <hr />
+                    <div>
+                        <h2>Experience</h2>
+                        <p>I completed an TI internship at Passos Magicos, working in the data department as an analyst. I gained extensive experience with relational databases, using SQL extensively. For data processing, I used Excel. I was also very important in decision-making due to my work with Power BI and reports. I also had considerable experience with the Activesoft system, in addition to providing technical support for cell phones and computers.</p>
+                    </div>
+                </div>
+                
             </section>
 
 
