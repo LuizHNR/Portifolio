@@ -42,7 +42,14 @@ export default function Contact() {
                         <p>years old</p>
                     </div>
 
-                    <p className="text-gray-500">Always in search of knowledge...</p>
+                    <p className="text-gray-500">
+                        Always in search of knowledge
+                        <span className={styles.dots}>
+                        <span>.</span>
+                        <span>.</span>
+                        <span>.</span>
+                    </span>
+                    </p>
 
                 </aside>
 
@@ -121,40 +128,59 @@ export default function Contact() {
 
                 <Caurosel/>
 
-                <p className="text-gray-500">I love learning new things...</p>
+                <p className="text-gray-500">
+                    I love learning new things
+                    <span className={styles.dots}>
+                        <span>.</span>
+                        <span>.</span>
+                        <span>.</span>
+                    </span>
+                </p>
             </section>
 
 
-            <section>
-                <h1>What can I offer you...</h1>
+            <section className={styles.information}>
 
-                <div>
-                    <h2>01</h2>
-                    <hr />
-                    <div>
-                        <h2>Development</h2>
-                        <p>I create scalable websites from scratch that seamlessly integrate with the design. Whether fully API-connected or not, I create both relational and non-relational databases and utilize them in a RESTful API.</p>
-                    </div>
-                </div>
+                <h1 className="text-2xl md:text-4xl font-bold text-center p-20">
+                    What can I offer you
+                    <span className={styles.dots}>
+                        <span>.</span>
+                        <span>.</span>
+                        <span>.</span>
+                    </span>
+                </h1>
 
-                <div>
-                    <h2>02</h2>
-                    <hr />
-                    <div>
-                        <h2>Team</h2>
-                        <p>I work very well in a team, helping to create new ideas and ways to implement them, always thinking about the scalability of the solutions, both horizontally and vertically.</p>
+                <div className={styles.information}>
+                    <div className={styles.about}>
+                        <h2 className="text-gray-500">01</h2>
+                        <hr className="text-gray-500"/>
+                        <div className="flex  flex-col gap-7">
+                            <h2>Development</h2>
+                            <p>I create scalable websites from scratch that seamlessly integrate with the design. Whether fully API-connected or not, I create both relational and non-relational databases and utilize them in a RESTful API.</p>
+                        </div>
                     </div>
-                </div>
 
-                <div>
-                    <h2>03</h2>
-                    <hr />
-                    <div>
-                        <h2>Experience</h2>
-                        <p>I completed an TI internship at Passos Magicos, working in the data department as an analyst. I gained extensive experience with relational databases, using SQL extensively. For data processing, I used Excel. I was also very important in decision-making due to my work with Power BI and reports. I also had considerable experience with the Activesoft system, in addition to providing technical support for cell phones and computers.</p>
+                    <div className={styles.about}>
+                        <h2 className="text-gray-500">02</h2>
+                        <hr className="text-gray-500"/>
+                        <div className="flex  flex-col gap-7">
+                            <h2>Team</h2>
+                            <p>I work very well in a team, helping to create new ideas and ways to implement them, always thinking about the scalability of the solutions, both horizontally and vertically.</p>
+                        </div>
                     </div>
+
+                    <div className={styles.about}>
+                        <h2 className="text-gray-500">03</h2>
+                        <hr className="text-gray-500"/>
+                        <div className="flex  flex-col gap-7">
+                            <h2>Experience</h2>
+                            <p>I completed an TI internship at Passos Magicos, working in the data department as an analyst. I gained extensive experience with relational databases, using SQL extensively. For data processing, I used Excel. I was also very important in decision-making due to my work with Power BI and reports. I also had considerable experience with the Activesoft system, in addition to providing technical support for cell phones and computers.</p>
+                        </div>
+                    </div>
+                    
                 </div>
                 
+
             </section>
 
 
