@@ -4,6 +4,7 @@ import BlobCursor from "@/components/cursorBlob/BlobCursor"
 import Welcome from "@/components/welcome/welcome";
 import Caurosel from "@/components/carousel/carousel"
 import WhatsAppButton from "@/components/whatsapp/whatsappButton";
+import CurveDivider from "@/components/curveDivider/CurveDivider";
 
 import styles from "./contact.module.css"
 
@@ -192,6 +193,8 @@ export default function Contact() {
             </section>
 
             <WhatsAppButton />
+
+            <CurveDivider />
         </main>
 
     );

@@ -1,0 +1,24 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: clamp(180px, 25vw, 360px);
+  overflow: hidden;
+  background: transparent;
+  cursor: default;
+}
+
+.back,
+.front {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.back path {
+  fill: #242226;
+}
+
+.front path {
+  fill: #242226;
+}

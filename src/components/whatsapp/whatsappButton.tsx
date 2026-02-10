@@ -13,6 +13,7 @@ export default function WhatsAppButton() {
         rounded-full
         shadow-[0_10px_30px_rgba(255, 255, 255, 0.35)]
         flex items-center justify-center
+        z-[999]
         "
 
       aria-label="WhatsApp"

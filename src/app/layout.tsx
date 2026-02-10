@@ -7,6 +7,7 @@ import PageWrapper from "@/components/loading/PageWrapper";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
 
+
 const figtree = Figtree({
   variable: "--font-figtree",
   subsets: ["latin"],

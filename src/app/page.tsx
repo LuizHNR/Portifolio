@@ -2,7 +2,7 @@ import Welcome from "@/components/welcome/welcome";
 import Particles  from "@/components/particles/Particles";
 import Image from "next/image";
 import CardSwap, { Card } from "@/components/card/CardSwap";
-
+import CurveDivider from "@/components/curveDivider/CurveDivider";
 import LogoLoop from "@/components/logoLoop/LogoLoop";
 import {SiReact,SiNextdotjs,SiTypescript,SiTailwindcss,SiGithub,SiHtml5,SiCss3,SiJavascript,SiDotnet,SiPython,
 } from 'react-icons/si';
@@ -218,7 +218,7 @@ const techLogos = [
 
       </section>
 
-
+      <CurveDivider />
     </main>
   );
 }
