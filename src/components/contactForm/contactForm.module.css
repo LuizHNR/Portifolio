@@ -1,9 +1,36 @@
+.meContact {
+  display: flex;
+  flex-direction: column;
+  gap: 140px;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  background-color: #242226;
+}
+
+.sectionDados {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: space-between;
+  gap: 20px;
+}
+
 .form {
   width: 100%;
   max-width: 500px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 50px;
+
+
+  & h1 {
+    color: #fff;
+    font-size: clamp(2rem, 2vw, 3rem);
+  }
+}
+
+.arrow {
+  color: #fff;
+  font-size: clamp(2rem, 2vw, 3rem);
 }
 
 .waveGroup {
@@ -13,7 +40,7 @@
 
 .input {
   font-size: 16px;
-  padding: 10px 10px 10px 5px;
+  padding: 10px 10px 5px 5px;
   display: block;
   width: 100%;
   border: none;
@@ -22,7 +49,23 @@
   color: white;
 }
 
+.textArea {
+  font-size: 16px;
+  padding: 10px 10px 0px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #515151;
+  background: transparent;
+  color: white;
+}
+
+
 .input:focus {
+  outline: none;
+}
+
+.textArea:focus {
   outline: none;
 }
 
@@ -48,6 +91,14 @@
   font-size: 14px;
   color: #ED145B;
 }
+
+.textArea:focus ~ .label .labelChar,
+.textArea:valid ~ .label .labelChar {
+  transform: translateY(-20px);
+  font-size: 14px;
+  color: #ED145B;
+}
+
 
 .bar {
   position: relative;
@@ -79,19 +130,172 @@
   width: 50%;
 }
 
+.textArea:focus ~ .bar::before,
+.textArea:focus ~ .bar::after {
+  width: 50%;
+}
+
+/* Remove fundo do autofill do Chrome */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #242226 inset !important;
+  -webkit-text-fill-color: #fff !important;
+  transition: background-color 9999s ease-in-out 0s;
+}
 
 
-.submitButton {
-  margin-top: 30px;
-  background: #a83232;
-  color: white;
-  border: none;
-  padding: 14px;
-  font-size: 16px;
+.fieldError {
+  color: #ff4d4f;
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: clamp(1rem, 2vw, 1.1rem);
+
+  & .dados{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-left: 15px;
+    font-weight: 500;
+  }
+}
+
+.dadosSocial{
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  padding-left: 15px;
+  font-weight: 500;
+}
+
+.button {
+
+
+
+  & .submitButton {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-self: flex-end;
+    background: #a83232;
+    color: white;
+    padding: 15px 30px;
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    cursor: pointer;
+    border-radius: 16px;
+    transition: 0.3s;
+
+    position: relative;
+    right: 8%;          
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+
+}
+
+.icon {
+  transition: transform 0.4s ease;
+}
+
+
+.social {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.social li {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  background: #f1f1f1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
+
+  font-size: 22px;
+  transition: all 0.3s ease;
+}
+
+/* Hover principal */
+.social li:hover {
+  background: #1da1f2;
+  color: white;
+  transform: translateY(-6px);
+}
+
+.github {
+  --social-color: #333;
+}
+
+.linkedin {
+  --social-color: #0077b5;
+}
+
+.instagram {
+  --social-color: #e4405f;
+}
+
+/* Tooltip */
+.social li::before {
+  content: attr(data-name);
+  position: absolute;
+  top: -40px;
+  background: var(--social-color);
+  color: white;
+  padding: 5px 10px;
   border-radius: 6px;
+  font-size: 12px;
+  opacity: 0;
+  pointer-events: none;
   transition: 0.3s;
 }
+
+.social li:hover::before {
+  opacity: 1;
+  top: -50px;
+}
+
+
+.social li:nth-child(1):hover {
+  background: #333; /* GitHub */
+}
+
+.social li:nth-child(2):hover {
+  background: #0077b5; /* LinkedIn */
+}
+
+.social li:nth-child(3):hover {
+  background: #e4405f; /* Instagram */
+}
+
+
+
+.submitButton:hover .icon {
+  transform: translateX(6px) rotate(15deg);
+}
+
+@keyframes fly {
+  0% { transform: translateX(0) rotate(0); }
+  50% { transform: translateX(8px) rotate(20deg); }
+  100% { transform: translateX(0) rotate(0); }
+}
+
+.sending {
+  animation: fly 0.8s ease-in-out infinite;
+}
+
 
 .submitButton:hover {
   background: #c93f3f;
@@ -113,19 +317,9 @@
 }
 
 
-/* Remove fundo do autofill do Chrome */
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-textarea:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0px 1000px #242226 inset !important;
-  -webkit-text-fill-color: #fff !important;
-  transition: background-color 9999s ease-in-out 0s;
-}
-
-
-.fieldError {
-  color: #ff4d4f;
-  font-size: 0.8rem;
-  margin-top: 4px;
+@media (max-width: 1070px) {
+  .arrow {
+    display: none;
+  }
+    
 }

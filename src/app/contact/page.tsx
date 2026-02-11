@@ -195,23 +195,7 @@ export default function Contact() {
 
             <CurveDivider />
 
-            <section className={styles.contactSection}>
-                <div className={styles.contactWrapper}>
-                    <div>
-                        <h1>Contact me</h1>
-                        <ContactForm />
-                    </div>
-
-                    <aside className={styles.info}>
-                        <p>It will be sent to this email.</p>
-                        <strong>luizhneri19@gmail.com</strong>
-
-                        <p>The WhatsApp icon leads to this number.</p>
-                        <strong>+55 11 97307-6649</strong>
-                        <p>luizhneri19@gmail.com</p>
-                    </aside>
-                </div>
-            </section>
+            <ContactForm />
 
             <WhatsAppButton />
 
