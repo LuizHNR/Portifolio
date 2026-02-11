@@ -122,3 +122,10 @@ textarea:-webkit-autofill {
   -webkit-text-fill-color: #fff !important;
   transition: background-color 9999s ease-in-out 0s;
 }
+
+
+.fieldError {
+  color: #ff4d4f;
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
