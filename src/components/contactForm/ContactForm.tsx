@@ -7,7 +7,7 @@ import { PiArrowBendRightDownBold } from "react-icons/pi";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
-
+import Link from "next/link";
 
 
 export default function ContactForm() {
@@ -141,15 +141,15 @@ export default function ContactForm() {
 
             <ul className={styles.social}>
               <li className={styles.github} data-name="GitHub">
-                <FaGithub />
+                <Link href="https://github.com/LuizHNR" target="_blank"><FaGithub /></Link>
               </li>
 
               <li className={styles.linkedin} data-name="LinkedIn">
-                <FaLinkedin />
+                <Link href="https://www.linkedin.com/in/luiz-henrique-neri-reimberg-6ab0032b8/" target="_blank"><FaLinkedin /></Link>
               </li>
 
               <li className={styles.instagram} data-name="Instagram">
-                <FaInstagram />
+                <Link href="https://www.instagram.com/lu_lhnr/" target="_blank"><FaInstagram /></Link>
               </li>
             </ul>
 
