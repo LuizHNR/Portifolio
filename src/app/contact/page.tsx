@@ -5,6 +5,7 @@ import Welcome from "@/components/welcome/welcome";
 import Caurosel from "@/components/carousel/carousel"
 import WhatsAppButton from "@/components/whatsapp/whatsappButton";
 import CurveDivider from "@/components/curveDivider/CurveDivider";
+import ContactForm from "@/components/contactForm/ContactForm";
 
 import styles from "./contact.module.css"
 
@@ -192,9 +193,27 @@ export default function Contact() {
 
             </section>
 
+            <CurveDivider />
+
+            <section className={styles.contactSection}>
+                <div className={styles.contactWrapper}>
+                    <div>
+                        <h1>Contact me</h1>
+                        <ContactForm />
+                    </div>
+
+                    <aside className={styles.info}>
+                        <p>It will be sent to this email.</p>
+                        <strong>luizhneri19@gmail.com</strong>
+
+                        <p>The WhatsApp icon leads to this number.</p>
+                        <strong>+55 11 97307-6649</strong>
+                    </aside>
+                </div>
+            </section>
+
             <WhatsAppButton />
 
-            <CurveDivider />
         </main>
 
     );

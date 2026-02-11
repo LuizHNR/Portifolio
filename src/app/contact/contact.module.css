@@ -1,7 +1,6 @@
 .mainContact{
     display: flex;
     flex-direction: column;
-    gap: 100px;
 }
 
 
@@ -87,8 +86,8 @@
 .graduated {
     display: flex;
     flex-direction: column;
-    gap: 40px;
-    padding: 10px 40px;
+    gap: 60px;
+    padding: 100px 40px;
 
     & .contente {
         display: flex;
@@ -157,6 +156,11 @@
     transform: translateY(-6px);
     opacity: 1;
   }
+}
+
+
+.contactSection{
+    background-color: #242226;
 }
 
 
