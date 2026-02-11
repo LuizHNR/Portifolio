@@ -208,6 +208,7 @@ export default function Contact() {
 
                         <p>The WhatsApp icon leads to this number.</p>
                         <strong>+55 11 97307-6649</strong>
+                        <p>luizhneri19@gmail.com</p>
                     </aside>
                 </div>
             </section>
